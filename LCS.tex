@@ -1,0 +1,132 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\title{LCS Project}
+\author{Solving N-Queens Problem using SAT Solver
+}
+\date{07 November 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{ Satisfiability and SAT Solver}
+\\
+\text{Subject : CS 5384 Logic for Computer Scientist
+Professor : Yuanlin Zhang\\ 
+\\ \\
+Member :\\ 
+         Jaewon Seong,\\
+         Teja Sai Srinivas Khajjayam,\\
+         Vanaja Saya\\
+} \\
+\\
+\\
+\\ \\ 
+\\ \\
+\section{ Objective}
+Download a SAT solver and how to install it and use it
+\\ \\
+Encode the n-queens problem into the DIMACS CNF format
+      and solve it by the SAT
+\\ \\
+\\ \\ \\ \\ 
+\\ \\ \\ \\
+\section{Outline} 
+
+
+1)How to install a SAT solver
+\\ \\
+2)How to set the program
+\\ \\
+3)Satisfiability
+\\ \\
+4)SAT Solver (MiniSAT)
+\\ \\
+5)Solving N-Queens using a SAT Solver
+\\ \\
+\section{    How to install a SAT solver
+}
+\includegraphics[width=1.3\textwidth]{01.png} \\
+\\
+\includegraphics[width=1.3\textwidth]{02.png}\\
+\\
+\section{How to set a SAT solver}
+\includegraphics[width=1.3\textwidth]{03.png} \\
+\\
+\includegraphics[width=1.3\textwidth]{04.png}\\
+\\
+\section{Satisfiability}
+1)A Boolean expression is satisfiable if there is an assignment to the variables that makes it true
+\\ \\
+2)Checking to see if a formula S is satisfiable can be done by searching a truth table for a true entry
+
+\section{SAT Solver (MiniSAT)}
+Input expected in CNF
+\\ \\
+Use DIMACS CNF format
+\\ \\
+   The input file starts with comments (each line start with c)
+\\ \\
+      The number of variables and the number of clauses defined by the line p cnf \#variables \#clauses
+\\ \\
+      Each of the next lines specifies a clause: a positive literal is denoted by the corresponding number, and a negative literal is denoted by the corresponding negative number
+\\ \\
+    Each of the next lines specifies a clause: a positive literal is denoted by the corresponding number, and a negative literal is denoted by the corresponding negative number
+\\ \\
+Use MiniSAT (minisat.se)
+\\ \\
+\section{SAT Solver (MiniSAT Example)}
+DIMACS 	format
+\\ \\
+(c = comment, ‘p cnf’ = SAT problem in CNF)
+\\ \\
+C SAT problem in CNF with 2 variables and 2 clauses
+\\ \\
+p cnf 2 2
+\\ \\
+-1 -2 0
+\\ \\
+-1 2 0
+\\ \\
+\section{SAT Solver (MiniSAT Example Input)}
+\includegraphics[width=1.3\textwidth]{05.png} \\
+\\ \\
+\section{SAT Solver (MiniSAT Example Output)}
+\includegraphics[width=1.3\textwidth]{06.png}\\
+\\
+\section{Pseudo code for \\
+  Solving N-Queens using a SAT Solver 
+}
+\includegraphics[width=1.3\textwidth]{13.PNG} \\
+\\
+1)We will take the Value of N from the user.\\ \\
+2)We will next Open the file with "w" Permissions.\\ \\
+3)We will append all the elements in the same row and column.\\ \\
+4)We will append the elements in the diagonal down from 0 to N .\\ \\
+5)We will append the elements in the diagonal down from N to 0 .\\ \\
+6)We will append the elements in the diagonal UP from 1 to N .\\ \\
+7)We will append the elements in the diagonal UP from N to 1 .\\ \\
+8)We will next write the line with "p cnf 'Number of 'Number of values in t\\  Board' 'No.of Clauses' " at the starting of the file.\\ \\
+9)We will send that file as input to Sat Solver to solve\\ \\
+10) We will Store the output cnf file.\\ \\
+11)We now print the generated cnf file in the 2-D Array for the better\\ understanding. \\ \\
+12)The places of the queens where it needs to be placed is shown.\\ \\
+
+\section{Solving N-Queens using a SAT Solver (Input)}
+\includegraphics[width=1.3\textwidth]{07.png} \\
+\\
+\includegraphics[width=1.3\textwidth]{08.png}\\
+\\
+\includegraphics[width=1.3\textwidth]{09.png} \\
+\\
+\includegraphics[width=1.3\textwidth]{10.png}\\
+\\
+\\\includegraphics[width=1.3\textwidth]{11.png} \\
+\\
+
+\section{Solving N-Queens using a SAT Solver (Output)}
+\includegraphics[width=1.3\textwidth]{12.png}\\
+\\
+\end{document}
